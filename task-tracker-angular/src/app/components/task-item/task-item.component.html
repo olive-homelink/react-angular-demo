@@ -1,10 +1,7 @@
-<span 
-  class="task-text"
-  [class.completed]="task.completed"
-  (click)="toggle.emit()">
+<span class="task-text" [class.completed]="task.completed" (click)="onToggle()">
   {{ task.title }}
 </span>
 <div class="task-buttons">
-  <button (click)="toggle.emit()">✓</button>
-  <button (click)="remove.emit()">🗑️</button>
+  <button (click)="onToggle()">✓</button>
+  <button (click)="onRemove()">🗑️</button>
 </div>
