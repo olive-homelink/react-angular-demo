@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let task of tasks">
+      <app-task-item 
+        [task]="task"
+        (toggle)="complete.emit(task.id)"
+        (remove)="delete.emit(task.id)">
+      </app-task-item>
+    </li>
+  </ul>
+  

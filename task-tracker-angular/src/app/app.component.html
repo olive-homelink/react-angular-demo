@@ -1,0 +1,16 @@
+<div class="app-container">
+  <img 
+  src="https://angular.io/assets/images/logos/angular/angular.svg" 
+  alt="Angular Logo"
+  class="logo"
+  width="64"
+  height="64"
+/>
+  <h1>Task Tracker</h1>
+  <app-task-input (taskAdded)="addTask($event)"></app-task-input>
+  <app-task-list 
+    [tasks]="tasks"
+    (complete)="toggleComplete($event)"
+    (delete)="deleteTask($event)">
+  </app-task-list>
+</div>
